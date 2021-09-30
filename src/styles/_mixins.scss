@@ -1,0 +1,15 @@
+// Responsive
+@mixin smallMobile() { @media screen and (max-width:325px) { @content; } } // @include mobile { }
+@mixin mobile() { @media screen and (max-width:767px) { @content; } } // @include mobile { }
+@mixin desktop() { @media screen and (min-width:768px) { @content; } } // @include desktop { }
+@mixin tablet() { @media screen and (max-width:1024px) { @content; } } // @include tablet { }
+@mixin onlyTablet() { @media screen and (min-width: 768px) and (max-width:1024px) { @content; } } // @include tablet { }
+@mixin onlyDesktop() { @media screen and (min-width:1025px) { @content; } } // @include desktop { }
+@mixin largeDesktop() { @media screen and (min-width:1400px) { @content; } }
+
+@mixin centrer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

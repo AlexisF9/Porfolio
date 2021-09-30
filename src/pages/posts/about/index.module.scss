@@ -1,0 +1,10 @@
+@import "../../../styles/mixins";
+
+.about {
+    @include centrer;
+
+    p {
+        width: 70%;
+    }
+    
+}
