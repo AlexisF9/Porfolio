@@ -7,4 +7,15 @@
     right: 4rem;
     color: $primary;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    i {
+        font-size: 2rem;
+        color: $primary;
+    }
+    
+    a:nth-child(2) {
+        padding: 0 0.5rem 0 0.5rem;
+    }
 }
