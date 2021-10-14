@@ -10,7 +10,8 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        height: 15rem;
+        height: 20rem;
+        clip-path: polygon(0% 0%,100% 0%,100% 63%,0% 100%);
 
         h1, p, a {
             &::selection {

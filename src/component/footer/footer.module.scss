@@ -1,2 +1,10 @@
 @import "../../styles/mixins";
 @import "../../styles/variables";
+
+.footer {
+    position: absolute;
+    bottom: 1rem;
+    right: 4rem;
+    color: $primary;
+    text-transform: uppercase;
+}
