@@ -13,3 +13,23 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin lien {
+    position: relative;
+    text-decoration: none;
+
+   span {
+       background-color: cyan;
+       position: absolute;
+       width: 100%;
+       bottom: 0;
+       height: 0;
+       opacity: 0.5;
+       transition: height 0.5s;
+   }
+
+   &:hover span {
+       height: 50%;
+       //top: 0;
+   }
+}

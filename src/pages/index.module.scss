@@ -1,5 +1,49 @@
-.component {
-    font-family: Helvetica;
-    font-weight: bold;
-    font-size: 2em;
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.contentAccueil {
+    width: 100%;
+
+    .content {
+        display: flex;
+        justify-content: center;
+
+        div {
+            width: 50%;
+
+            h2 {
+                color: $primary;
+                font-size: 30px;
+            }
+            
+            .listeLien {
+                margin: 1rem 0 1rem 0;
+
+                .lienRea {
+                    color: black;
+                    width: fit-content;
+                    font-size: 20px;
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: flex-start;
+                    padding: 0;
+                    margin: 5px 0 0 0;
+
+                    li {
+                        border: 1px solid black;
+                        padding: 5px;
+                        border-radius: 3px;
+                        margin-right: 10px;
+                        font-size: 14px;
+                        width: fit-content;
+                    }
+                }
+
+                
+            }
+        }
+    }
 }
+

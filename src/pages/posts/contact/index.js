@@ -1,14 +1,10 @@
 import Link from 'next/link'
+import {Header} from '../../../component/header'
 
 export default function Contact() {
   return (
     <>
-      <h1>First Post</h1>
-      <h2>
-        <Link href="/">
-          <a>Back to home</a>
-        </Link>
-      </h2>
+      <Header title="Contact" subtitle="" lienAbout="/posts/about" lienContact="/posts/contact" />
     </>
   )
 }

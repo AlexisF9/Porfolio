@@ -4,34 +4,37 @@ import Link from 'next/link'
 export function Header(props) {
     return (
         <main className={css.header}>
+            <div className={css.headerContent}>
 
-
-            <Link href="/">
+            <div>
+                <Link href="/">
+                    <a>
+                        <h1>{props.title}</h1>
+                        <p>{props.subtitle}</p>
+                    </a>
+                </Link>
+            </div>
             
-                <a>
-                    <h1>{props.title}</h1>
-                </a>
-        
-            </Link>
-
             <ul>
                 <li>
                     <Link href={props.lienAbout}>
-                        <a>
+                        <a className={css.lienHeader}><span></span>
                             About
                         </a>
                     </Link>
                 </li>
                 <li>
                     <Link href={props.lienContact}>
-                        <a>
+                        <a className={css.lienHeader}><span></span>
                             Contact
                         </a>
                     </Link>
                 </li>
             </ul>
 
-            
+
+            </div>
         </main>
+        
     )
 }

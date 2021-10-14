@@ -18,19 +18,45 @@
  	font-display: swap;
  }
 
+ @font-face {
+    font-family: 'Lemonmilk';
+    src: url("../styles/fonts/LEMONMILK-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../styles/fonts/Roboto-Light.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body, html {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Roboto;
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: Lemonmilk, sans-serif;
 }
 
 h1 {
-    margin: 0;
+    font-size: 3rem;
+    letter-spacing: 2px;
 }
 
 a {
     text-decoration: none;
-    //color: white;
+}
+
+li a {
+    text-transform: uppercase;
 }
 
 ul {

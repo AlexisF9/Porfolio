@@ -1,10 +1,19 @@
 @import "../../../styles/mixins";
 
 .about {
-    @include centrer;
 
-    p {
-        width: 70%;
+    .AboutText {
+        @include centrer;
+        width: 100%;
+
+        p {
+            width: 70%;
+    
+            &:last-child {
+                margin-bottom: 4rem;
+            }
+        }
     }
+    
     
 }
