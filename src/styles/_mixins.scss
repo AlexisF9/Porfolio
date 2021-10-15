@@ -70,7 +70,6 @@
         right: 0;
         z-index: 9999999;
         animation: expand .5s ease-in-out  forwards 1s;
-        //transform-origin: top right;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -81,6 +80,9 @@
             color: white;
             font-family: Lemonmilk;
             font-size: 50px;
+            @include mobile {
+                font-size: 30px;
+            }
         }
     }
     
