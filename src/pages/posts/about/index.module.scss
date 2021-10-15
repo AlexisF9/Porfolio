@@ -3,7 +3,8 @@
 
 .about {
     @include fondAnimation;
-
+    width: 100%;
+    
     .AboutContent {
         display: flex;
         flex-direction: column;
@@ -73,6 +74,12 @@
             a {
                 @include lien;
                 color: black;
+            }
+
+            .monCV {
+                @include mobile {
+                    padding-bottom: 3rem;
+                }
             }
         }
 
