@@ -1,3 +1,6 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
 // Fonts
 // @font-face {
 // 	font-family: 'Regular';
@@ -49,6 +52,9 @@ h1, h2 {
 h1 {
     font-size: 3rem;
     letter-spacing: 2px;
+    @include mobile {
+        font-size: 2.5rem;
+    }
 }
 
 a {

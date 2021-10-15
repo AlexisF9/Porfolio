@@ -7,9 +7,30 @@
     .content {
         display: flex;
         justify-content: center;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        .image {
+            margin-left: 10%;
+            opacity: 0;
+            width: 25rem;
+            @include img;
+            transition: opacity $transition;
+
+            @include mobile {
+                width: 20rem;
+                margin: 2rem 0 2rem 0
+            }
+
+            &.active {
+                opacity: 1;
+            }
+        }
 
         div {
-            width: 50%;
 
             h2 {
                 color: $primary;
@@ -24,13 +45,13 @@
                     width: fit-content;
                     font-size: 20px;
                     margin-left: -20px;
-                    transition: margin 0.3s;
+                    transition: margin $transition;
 
                     i {
                         width: 15px;
                         text-align: center;
                         opacity: 0;
-                        transition: opacity 0.3s;
+                        transition: opacity $transition;
                     }
 
                     &:hover {

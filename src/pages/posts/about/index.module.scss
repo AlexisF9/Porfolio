@@ -1,4 +1,5 @@
 @import "../../../styles/mixins";
+@import "../../../styles/variables";
 
 .about {
 
@@ -15,12 +16,13 @@
             div {
                 display: flex;
 
+                @include mobile {
+                        display: inherit;
+                }
+
                 img {
                     max-height: 15rem;
-                    border-radius: 9px;
-                    -webkit-box-shadow: 5px 5px 18px -6px rgba(10,32,43,1);
-                    -moz-box-shadow: 5px 5px 18px -6px rgba(10,32,43,1);
-                    box-shadow: 5px 5px 18px -6px rgba(10,32,43,1);
+                    @include img;
                 }
 
                 ul {
@@ -30,17 +32,32 @@
                     flex-direction: column;
                     justify-content: center;
 
+                    @include mobile {
+                        margin-top: 1rem;
+                    }
+
                     li {
                         margin: 0 0 10px 10px;
                         margin-left: -2rem;
                         opacity: 0;
-                        transition: margin-left 0.5s, opacity 0.3s;
+                        transition: margin-left 0.5s, opacity $transition;
+
+                        @include mobile {
+                            margin-left: 0;
+                            opacity: 1;
+                        }
+                        
                     }
                 }
 
                 img:hover ~ ul li {
                     margin-left: 2rem;
                     opacity: 1;
+
+                    @include mobile {
+                        margin-left: 0;
+                        opacity: 1;
+                    }
                 }
                 
             }

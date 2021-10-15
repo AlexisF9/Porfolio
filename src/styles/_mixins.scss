@@ -1,6 +1,6 @@
 // Responsive
 @mixin smallMobile() { @media screen and (max-width:325px) { @content; } } // @include mobile { }
-@mixin mobile() { @media screen and (max-width:767px) { @content; } } // @include mobile { }
+@mixin mobile() { @media screen and (max-width:850px) { @content; } } // @include mobile { }
 @mixin desktop() { @media screen and (min-width:768px) { @content; } } // @include desktop { }
 @mixin tablet() { @media screen and (max-width:1024px) { @content; } } // @include tablet { }
 @mixin onlyTablet() { @media screen and (min-width: 768px) and (max-width:1024px) { @content; } } // @include tablet { }
@@ -51,6 +51,13 @@
     &:hover span {
         top: 0;
     }
+}
+
+@mixin img {
+    border-radius: 9px;
+    -webkit-box-shadow: 5px 5px 18px -6px rgba(10,32,43,1);
+    -moz-box-shadow: 5px 5px 18px -6px rgba(10,32,43,1);
+    box-shadow: 5px 5px 18px -6px rgba(10,32,43,1);
 }
 
 

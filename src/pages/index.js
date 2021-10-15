@@ -1,6 +1,7 @@
 import css from './index.module.scss'
 import Link from 'next/link'
 import {Header} from '../component/header'
+import {createRef, useEffect} from "react";
 
 export async function getServerSideProps() { // appel du json pour rendre le contenu dynamique
     const res = await fetch(`http://localhost:3000/data/realisations.json`)
@@ -14,6 +15,14 @@ export async function getServerSideProps() { // appel du json pour rendre le con
 }
 
 export default function Home({realisations}) {
+
+    
+    useEffect(() => {
+        console.log("a jour");
+    }, []);
+
+    const image = createRef();
+    
     return (
         <main className={css.contentAccueil}>
             <Header title="Alexis Flacher" subtitle="Développeur Front & Webdesigner" lienAbout="/posts/about" lienContact="/posts/contact" />
@@ -21,26 +30,34 @@ export default function Home({realisations}) {
                 <div>
                     <h2>Mes réalisations :</h2>
                     
-                        {realisations.map(rea => {
-                            return (
-                                <div className={css.listeLien}>
-                                    <Link href="/">
-                                        <a className={css.lienRea}>
-                                            <i class="fas fa-angle-right"></i> {rea.titre}
-                                        </a>
-                                    </Link>
-                                    <ul>
-                                        {rea.tags.map(tag => {
-                                            return (
-                                                <li>{tag.name}</li>
-                                            )
-                                        })}
-                                    </ul>
-                                </div>
-                            )
-                        })}
-                    
+                    {realisations.map(rea => {
+                        return (
+                            <div className={css.listeLien} key={rea.id}>
+                                <Link href="/">
+                                    <a className={css.lienRea}
+                                        onMouseEnter={() => {
+                                            image.current.classList.add(css.active);
+                                            image.current.src = rea.img;
+                                        }}
+                                        onMouseLeave={() => {
+                                            image.current.classList.remove(css.active);
+                                        }}
+                                    >
+                                        <i class="fas fa-angle-right"></i> {rea.titre}
+                                    </a>
+                                </Link>
+                                <ul>
+                                    {rea.tags.map(tag => {
+                                        return (
+                                            <li key={tag.name}>{tag.name}</li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                        )
+                    })}
                 </div>
+                <img className={css.image} ref={image}/>     
             </div>
         </main>
         

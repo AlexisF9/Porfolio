@@ -2,7 +2,7 @@
     {
         "id": "1",
         "titre": "Rick and Morty API",
-        "img": "http://localhost:3000/img/...",
+        "img": "https://i1.wp.com/views.fr/wp-content/uploads/2020/05/rick-morty.jpg?fit=1280%2C720&ssl=1",
         "text": "lorem ipsum",
         "url_repo": "https://github.com/AlexisF9/RickAndMorty-App",
         "tags": [
@@ -17,7 +17,7 @@
     {
         "id": "2",
         "titre": "Mon Portfolio",
-        "img": "http://localhost:3000/img/...",
+        "img": "http://localhost:3000/img/portfolio.png",
         "text": "lorem ipsum",
         "url_repo": "https://github.com/AlexisF9/Porfolio",
         "tags": [

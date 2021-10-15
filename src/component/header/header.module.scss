@@ -13,6 +13,15 @@
         height: 20rem;
         clip-path: polygon(0% 0%,100% 0%,100% 63%,0% 100%);
 
+        @include mobile {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 1rem;
+            height: 15rem;
+            clip-path: polygon(0% 0%,100% 0%,100% 75%,0% 100%);
+        }
+
         h1, p, a {
             &::selection {
                 color: black;
@@ -29,18 +38,34 @@
             color: white;
             margin: 0;
         }
+
+        p {
+            @include mobile {
+                display: none;
+            }
+        }
     
         ul {
             display: flex;
+
+            @include mobile {
+                padding: 0;
+            }
     
             li {
                 margin: 0 1rem 0 1rem;
+
+                @include mobile {
+                    margin: 0 1rem 0 0;
+                }
+
+                .lienHeader {
+                    @include lienHeader;
+                }
             }
         }
 
-        .lienHeader {
-            @include lienHeader;
-        }
+        
     }
 }
 
