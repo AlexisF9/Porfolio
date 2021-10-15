@@ -3,6 +3,7 @@
 
 .contentAccueil {
     width: 100%;
+    @include fondAnimation;
 
     .content {
         display: flex;

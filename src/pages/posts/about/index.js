@@ -1,12 +1,22 @@
 import Link from 'next/link'
 import css from './index.module.scss'
 import {Header} from '../../../component/header'
-
+import {createRef, useEffect} from "react";
 
 export default function About() {
+
+  const fond = createRef();
+
+  useEffect(() => {
+      fond.current.classList.add(css.fond);
+    }, []);
+
   return (
     <>
     <div className={css.about}>
+      <div ref={fond}>
+        <span>Alexis Flacher</span>
+      </div>
       <Header title="About" subtitle="" lienAbout="/posts/about" lienContact="/posts/contact" />
 
       <div className={css.AboutContent}>

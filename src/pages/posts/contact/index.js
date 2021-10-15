@@ -1,10 +1,21 @@
 import Link from 'next/link'
 import {Header} from '../../../component/header'
 import css from './index.module.scss'
+import {createRef, useEffect} from "react";
 
 export default function Contact() {
+
+  const fond = createRef();
+
+  useEffect(() => {
+      fond.current.classList.add(css.fond);
+    }, []);
+
   return (
       <div className={css.contentContact}>
+        <div ref={fond}>
+          <span>Alexis Flacher</span>
+        </div>
         <Header title="Contact" subtitle="" lienAbout="/posts/about" lienContact="/posts/contact" />
         <div className={css.lienContact}>
           <p>Pour me contacter, vous pouvez m'envoyer un mail à <a href="mailto:alexis.flacher38@gmail.com"><span></span>alexis.flacher38@gmail.com</a>.</p>

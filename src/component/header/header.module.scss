@@ -12,6 +12,11 @@
         align-items: center;
         height: 20rem;
         clip-path: polygon(0% 0%,100% 0%,100% 63%,0% 100%);
+        transition: clip-path $transition;
+
+        &:hover {
+            clip-path: polygon(0% 0%,100% 0%,100% 70%,0% 100%);
+        }
 
         @include mobile {
             flex-direction: column;
@@ -20,6 +25,9 @@
             padding-left: 1rem;
             height: 15rem;
             clip-path: polygon(0% 0%,100% 0%,100% 75%,0% 100%);
+            &:hover {
+                clip-path: polygon(0% 0%,100% 0%,100% 75%,0% 100%);
+            }
         }
 
         h1, p, a {

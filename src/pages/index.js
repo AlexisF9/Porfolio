@@ -16,15 +16,18 @@ export async function getServerSideProps() { // appel du json pour rendre le con
 
 export default function Home({realisations}) {
 
+    const fond = createRef();
+    const image = createRef();
     
     useEffect(() => {
-        console.log("a jour");
+        fond.current.classList.add(css.fond);
     }, []);
-
-    const image = createRef();
     
     return (
         <main className={css.contentAccueil}>
+            <div ref={fond}>
+                <span>Alexis Flacher</span>
+            </div>
             <Header title="Alexis Flacher" subtitle="Développeur Front & Webdesigner" lienAbout="/posts/about" lienContact="/posts/contact" />
             <div className={css.content}>
                 <div>
@@ -33,7 +36,8 @@ export default function Home({realisations}) {
                     {realisations.map(rea => {
                         return (
                             <div className={css.listeLien} key={rea.id}>
-                                <Link href="/">
+                                {/*<Link href={`/posts/realisations/${rea.id}`}>*/}
+                                <Link href={`/`}>
                                     <a className={css.lienRea}
                                         onMouseEnter={() => {
                                             image.current.classList.add(css.active);
@@ -57,7 +61,7 @@ export default function Home({realisations}) {
                         )
                     })}
                 </div>
-                <img className={css.image} ref={image}/>     
+                <img className={css.image} ref={image}/>
             </div>
         </main>
         
