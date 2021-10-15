@@ -1,0 +1,21 @@
+@import "../../../styles/mixins";
+
+
+.contentContact {
+    
+    .lienContact {
+        @include centrer;
+        width: 100%;
+
+        p {
+            width: 70%;
+
+            a {
+                color: black;
+                @include lien;
+            }
+        }
+    }
+
+    
+}

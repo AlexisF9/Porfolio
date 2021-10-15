@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-@mixin lien {
+@mixin lienHeader {
     position: relative;
     text-decoration: none;
 
@@ -33,3 +33,24 @@
        //top: 0;
    }
 }
+
+@mixin lien {
+    position: relative;
+
+    span {
+        position: absolute;
+        background-color: aqua;
+        bottom: 0;
+        top: 85%;
+        left: 0;
+        right: 0;
+        opacity: 0.5;
+        transition: top 0.3s;
+    }
+
+    &:hover span {
+        top: 0;
+    }
+}
+
+
