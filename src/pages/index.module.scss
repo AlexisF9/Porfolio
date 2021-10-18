@@ -110,7 +110,13 @@
             top: 10px;
             font-size: 30px;
         }
+
+        a {
+            color: black;
+            @include lien;
+        }
     }
+
     .open {
         opacity: 1;
         pointer-events: auto;

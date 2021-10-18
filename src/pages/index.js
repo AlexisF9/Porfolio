@@ -20,6 +20,7 @@ export default function Home({realisations}) {
     const image = createRef();
     const title = createRef();
     const text = createRef();
+    const lienProjet = createRef();
 
     const modal = createRef();
     const overlay = createRef();
@@ -49,11 +50,13 @@ export default function Home({realisations}) {
                                             image.current.src = rea.img;
                                             text.current.innerHTML=rea.text;
                                             title.current.innerHTML=rea.titre;
+                                            lienProjet.current.href=rea.url_repo;
                                         }}
                                         onMouseLeave={() => {
                                             //image.current.classList.remove(css.active);
                                         }}
                                         onClick={() => {
+                                            
                                             modal.current.classList.add(css.open);
                                             overlay.current.classList.add(css.overlayOpen);
                                         }}
@@ -87,6 +90,7 @@ export default function Home({realisations}) {
                     >&times;</span>
                     <h3 ref={title}></h3>
                     <p ref={text}></p>
+                    <i class="fas fa-link"></i> <a ref={lienProjet} target="_blank"><span></span>Code source du projet</a>
                 </div>
             </div>
         </main>
