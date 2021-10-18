@@ -2,7 +2,7 @@
     {
         "id": "1",
         "titre": "Rick and Morty API",
-        "img": "https://i1.wp.com/views.fr/wp-content/uploads/2020/05/rick-morty.jpg?fit=1280%2C720&ssl=1",
+        "img": "http://localhost:3000/img/rick-morty.png",
         "text": "A mon entrée chez TBWA/Paris, j'ai eu l'occasion de réaliser une remise à niveau sur les framework React et Next JS. C'est dans ce contexte que j'ai réalisé cette application avec un appel à une API sur le thème de Rick et Morty",
         "url_repo": "https://github.com/AlexisF9/RickAndMorty-App",
         "tags": [
