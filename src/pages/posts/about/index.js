@@ -42,5 +42,8 @@ export default function About() {
   )
 }
 
+function togglePopup() {
+  document.getElementById("popup").classList.toggle("active");
+}
 
  

@@ -69,3 +69,14 @@ ul {
     list-style: none;
 }
 
+//////////////////////////////////////// SCROLL BAR
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgb(220, 220, 220);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $primary;
+  }
