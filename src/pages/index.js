@@ -18,6 +18,11 @@ export default function Home({realisations}) {
 
     const fond = createRef();
     const image = createRef();
+    const title = createRef();
+    const text = createRef();
+
+    const modal = createRef();
+    const overlay = createRef();
     
     useEffect(() => {
         fond.current.classList.add(css.fond);
@@ -42,9 +47,15 @@ export default function Home({realisations}) {
                                         onMouseEnter={() => {
                                             image.current.classList.add(css.active);
                                             image.current.src = rea.img;
+                                            text.current.innerHTML=rea.text;
+                                            title.current.innerHTML=rea.titre;
                                         }}
                                         onMouseLeave={() => {
-                                            image.current.classList.remove(css.active);
+                                            //image.current.classList.remove(css.active);
+                                        }}
+                                        onClick={() => {
+                                            modal.current.classList.add(css.open);
+                                            overlay.current.classList.add(css.overlayOpen);
                                         }}
                                     >
                                         <i class="fas fa-angle-right"></i> {rea.titre}
@@ -62,6 +73,21 @@ export default function Home({realisations}) {
                     })}
                 </div>
                 <img className={css.image} ref={image}/>
+            </div>
+
+            <div className={css.overlay} ref={overlay}></div>
+            <div id="myModal" className={css.modal} ref={modal}>
+                <div class="modal-content">
+                    <span 
+                    className={css.close}
+                    onClick={() => {
+                        modal.current.classList.remove(css.open);
+                        overlay.current.classList.remove(css.overlayOpen);
+                    }}
+                    >&times;</span>
+                    <h3 ref={title}></h3>
+                    <p ref={text}></p>
+                </div>
             </div>
         </main>
         

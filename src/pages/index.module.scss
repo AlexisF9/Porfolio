@@ -83,5 +83,51 @@
             }
         }
     }
+
+    .modal {
+        pointer-events: none;
+        opacity: 0;
+        width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: white;
+        z-index: 9999999;
+        color: black;
+        border-radius: 9px;
+        padding: 3rem 2rem;
+        transition: opacity $transition;
+        transform: translate(-50%, -50%);
+
+        @include mobile {
+            width: 70%;
+        }
+
+        span {
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 30px;
+        }
+    }
+    .open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .overlay {
+        z-index: 9999998;
+        opacity: 0;
+    }
+    .overlayOpen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: 0.8;
+    }
 }
 
