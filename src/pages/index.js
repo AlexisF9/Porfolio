@@ -25,6 +25,7 @@ export default function Home({realisations}) {
 
     const fond = createRef();
     const image = createRef();
+    const imageModal = createRef();
     const title = createRef();
     const text = createRef();
     const lienProjet = createRef();
@@ -37,7 +38,7 @@ export default function Home({realisations}) {
     }, []);
     
     return (
-        <main className={css.contentAccueil}>
+        <div className={css.contentAccueil}>
             <div ref={fond}>
                 <span>Alexis Flacher</span>
             </div>
@@ -55,6 +56,7 @@ export default function Home({realisations}) {
                                         onMouseEnter={() => {
                                             image.current.classList.add(css.active);
                                             image.current.src = rea.img;
+                                            imageModal.current.src = rea.img;
                                             text.current.innerHTML=rea.text;
                                             title.current.innerHTML=rea.titre;
                                             lienProjet.current.href=rea.url_repo;
@@ -98,9 +100,10 @@ export default function Home({realisations}) {
                     <h3 ref={title}></h3>
                     <p ref={text}></p>
                     <i class="fas fa-link"></i> <a ref={lienProjet} target="_blank"><span></span>Code source du projet</a>
+                    <img className={css.imageModal} ref={imageModal}/>
                 </div>
             </div>
-        </main>
+        </div>
         
     )
 }
