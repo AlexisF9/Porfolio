@@ -9,7 +9,7 @@ export async function getServerSideProps() { // appel du json pour rendre le con
     const realisations = await res.json()
 
     /*
-const reaPath = path.join(process.cwd(), 'public/data/realisations.json');
+    const reaPath = path.join(process.cwd(), 'public/data/realisations.json');
     const res = await fs.readFile(reaPath);
     const realisations = JSON.parse(res);
     */
