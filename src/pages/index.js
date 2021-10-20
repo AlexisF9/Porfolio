@@ -2,10 +2,13 @@ import css from './index.module.scss'
 import Link from 'next/link'
 import {Header} from '../component/header'
 import {createRef, useEffect} from "react";
+import { promises as fs } from 'fs'
+import path from 'path'
 
 export async function getServerSideProps() { // appel du json pour rendre le contenu dynamique
-    const res = await fetch(`http://localhost:3000/data/realisations.json`)
-    const realisations = await res.json()
+    const reaPath = path.join(process.cwd(), 'public/data/realisations.json');
+    const res = await fs.readFile(reaPath);
+    const realisations = JSON.parse(res);
 
     return {
         props: { 
