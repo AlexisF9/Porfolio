@@ -6,6 +6,7 @@
     @include fondAnimation;
     
     @include mobile {
+        height: 100vh;
         position: relative;
     }
 
