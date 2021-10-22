@@ -29,7 +29,6 @@ export default function Home({realisations}) {
     const title = createRef();
     const text = createRef();
     const lienProjet = createRef();
-
     const modal = createRef();
     const overlay = createRef();
     
@@ -87,7 +86,11 @@ export default function Home({realisations}) {
                 <img className={css.image} ref={image}/>
             </div>
 
-            <div className={css.overlay} ref={overlay}></div>
+            <div className={css.overlay} ref={overlay}
+            onClick={() => {                 
+                modal.current.classList.remove(css.open);
+                overlay.current.classList.remove(css.overlayOpen);
+            }}></div>
             <div id="myModal" className={css.modal} ref={modal}>
                 <div class="modal-content">
                     <span 
