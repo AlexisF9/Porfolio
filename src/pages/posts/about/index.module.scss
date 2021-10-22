@@ -24,11 +24,13 @@
                 }
 
                 img {
+                    z-index: 0;
                     max-height: 15rem;
                     @include img;
                 }
 
                 ul {
+                    z-index: -1;
                     padding: 0;
                     margin: 0;
                     display: flex;

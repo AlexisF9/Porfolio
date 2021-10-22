@@ -73,9 +73,9 @@ export default function Home({realisations}) {
                                     </a>
                                 </Link>
                                 <ul>
-                                    {rea.tags.map(tag => {
+                                    {rea.tags.map((tag, index) => {
                                         return (
-                                            <li key={tag.name}>{tag.name}</li>
+                                            <li key={index}>{tag}</li>
                                         )
                                     })}
                                 </ul>
