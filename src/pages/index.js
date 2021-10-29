@@ -83,7 +83,7 @@ export default function Home({realisations}) {
                         )
                     })}
                 </div>
-                <img className={css.image} ref={image}/>
+                <img alt="" className={css.image} ref={image}/>
             </div>
 
             <div className={css.overlay} ref={overlay}
@@ -102,8 +102,8 @@ export default function Home({realisations}) {
                     >&times;</span>
                     <h3 ref={title}></h3>
                     <p ref={text}></p>
-                    <i class="fas fa-link"></i> <a ref={lienProjet} target="_blank"><span></span>Code source du projet</a>
-                    <img className={css.imageModal} ref={imageModal}/>
+                    <i class="fas fa-link"></i> <a ref={lienProjet}><span></span>Code source du projet</a>
+                    <img alt="" className={css.imageModal} ref={imageModal}/>
                 </div>
             </div>
         </div>
