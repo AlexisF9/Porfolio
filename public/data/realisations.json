@@ -1,6 +1,29 @@
 [
     {
         "id": "1",
+        "titre": "Projet MERN",
+        "img": "/img/mern.jpeg",
+        "text": "Lors de mon année de Bachelor j'ai eu l'occasion de créer un projet MERN (Mongo DB, Express, React JS, Node JS) où j'ai produit pour la première fois le backend et le frontend en JS.",
+        "url_repo": "https://github.com/AlexisF9/mern-project-back",
+        "tags": [
+            "Mongo DB",
+            "Express",
+            "React JS",
+            "Node JS"  
+        ]     
+    },
+    {
+        "id": "2",
+        "titre": "Scraping avec puppeteer",
+        "img": "/img/puppeteer.jpeg",
+        "text": "Le scraping est un concept qui m'était inconnu avant mon année de Bachelor. J'ai trouvé le concept très intéressant, ce qui m'a donné l'envie d'en apprendre davantage et de m'y essayer pour la première fois avec Puppeteer.",
+        "url_repo": "https://github.com/AlexisF9/puppeteer-scraping",
+        "tags": [
+            "Puppeteer"
+        ]     
+    },
+    {
+        "id": "3",
         "titre": "Rick and Morty API",
         "img": "/img/rick-morty.png",
         "text": "A mon entrée chez TBWA/Paris, j'ai eu l'occasion de réaliser une remise à niveau sur les framework React et Next JS. C'est dans ce contexte que j'ai réalisé cette application avec un appel à une API sur le thème de Rick et Morty",
@@ -11,7 +34,7 @@
         ]     
     },
     {
-        "id": "2",
+        "id": "4",
         "titre": "Mon Portfolio",
         "img": "/img/portfolio.png",
         "text": "Etant maintenant à l'aise avec les technologies du front-end, je voulais montrer mes progrès à travers la refonte de mon e-portfolio qui serais avant tout ma vitrine pour montrer mes futures réalisations dans le front et le webdesign. Je l'es réalisé en Next JS ce qui me permet d'avoir un site plus fluide et performant.",
@@ -22,7 +45,7 @@
         ]     
     },
     {
-        "id": "3",
+        "id": "5",
         "titre": "Blog voyage",
         "img": "/img/blog.png",
         "text": "Réalisé à l'occasion de la fin de mes deux ans de DUT MMI, ce blog est LE gros projet de mon DUT qui ma permis de devenir polvalent dans la conception d'un site et de la gestion d'un tel projet. C'est un projet touche à tout qui m'a permis de réaliser du back mais aussi du front et du webdesign.",
