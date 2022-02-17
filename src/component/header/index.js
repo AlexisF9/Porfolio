@@ -24,9 +24,24 @@ export function Header(props) {
                     </Link>
                 </li>
                 <li>
-                    <Link href={props.lienContact}>
-                        <a className={css.lienHeader}><span></span>
-                            Contact
+                    <Link href="https://github.com/AlexisF9">
+                        <a className={css.lienGitHub} target="BLANCK_">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="mailto:alexis.flacher38@gmail.com">
+                        <a className={css.lienEmail}>
+                            <i class="far fa-envelope"></i>
+                            <i class="far fa-envelope-open"></i>
+                        </a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="https://www.linkedin.com/in/alexis-flacher-772ba7197/">
+                        <a className={css.lienLinkedin} target="BLANCK_">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     </Link>
                 </li>
@@ -35,6 +50,7 @@ export function Header(props) {
 
             </div>
         </main>
+        
         
     )
 }

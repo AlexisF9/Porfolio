@@ -41,7 +41,7 @@ export default function Home({realisations}) {
             <div ref={fond}>
                 <span>Alexis Flacher</span>
             </div>
-            <Header title="Alexis Flacher" subtitle="Développeur Front & Webdesigner" lienAbout="/posts/about" lienContact="/posts/contact" />
+            <Header title="Alexis Flacher" subtitle="Développeur Front & Webdesigner" lienAbout="/posts/about" />
             <div className={css.content}>
                 <div>
                     <h2>Mes réalisations :</h2>
