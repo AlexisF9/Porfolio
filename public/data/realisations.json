@@ -32,28 +32,5 @@
             "React JS",
             "SASS"  
         ]     
-    },
-    {
-        "id": "4",
-        "titre": "Mon Portfolio",
-        "img": "/img/portfolio.png",
-        "text": "Etant maintenant à l'aise avec les technologies du front-end, je voulais montrer mes progrès à travers la refonte de mon e-portfolio qui serais avant tout ma vitrine pour montrer mes futures réalisations dans le front et le webdesign. Je l'es réalisé en Next JS ce qui me permet d'avoir un site plus fluide et performant.",
-        "url_repo": "https://github.com/AlexisF9/Porfolio",
-        "tags": [
-            "Next JS",
-            "SASS"  
-        ]     
-    },
-    {
-        "id": "5",
-        "titre": "Blog voyage",
-        "img": "/img/blog.png",
-        "text": "Réalisé à l'occasion de la fin de mes deux ans de DUT MMI, ce blog est LE gros projet de mon DUT qui ma permis de devenir polvalent dans la conception d'un site et de la gestion d'un tel projet. C'est un projet touche à tout qui m'a permis de réaliser du back mais aussi du front et du webdesign.",
-        "url_repo": "https://github.com/AlexisF9/",
-        "tags": [
-            "Gestion de projet",
-            "PHP/SQL"  
-        ] 
     }
-    
 ]
