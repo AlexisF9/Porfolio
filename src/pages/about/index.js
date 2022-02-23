@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import css from './index.module.scss'
-import {Header} from '../../../component/header'
+import { Header } from 'component/header';
 import {createRef, useEffect} from "react";
 
 export default function About() {

@@ -91,65 +91,60 @@
 
     .modal {
         pointer-events: none;
-        opacity: 0;
-        width: 500px;
+        width: 50%;
         position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 0;
+        right: -50%;
+        bottom: 0;
         background-color: white;
         z-index: 9999999;
         color: black;
-        border-radius: 9px;
-        padding: 3rem 2rem;
-        transition: opacity $transition;
-        
-        img {
-            width: 25rem;
-            @include img;
-            margin-top: 1rem;
-            display: none;
-
-            @include mobile {
-                display: inherit;
-                width: 100%;
-                margin-top: 2rem;
-            }
-        }
+        transition: right 0.6s;
 
         @include mobile {
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: auto;
-            border-radius: 0;
-            transform: inherit;
+            width: 100%;
+            right: -100%;
         }
 
-        span {
-            cursor: pointer;
-            position: absolute;
-            right: 20px;
-            top: 10px;
-            font-size: 30px;
-        }
+        .modalContent {
+            padding: 3rem 2rem;
 
-        a {
-            color: black;
-            @include lien;
+            img {
+                width: 100%;
+                @include img;
+                margin-top: 1rem;
+    
+                @include mobile {
+                    margin-top: 2rem;
+                }
+            }
+    
+            span {
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                top: 10px;
+                font-size: 30px;
+            }
+    
+            a {
+                color: black;
+                @include lien;
+            }
         }
     }
 
     .open {
-        opacity: 1;
+        right: 0;
         pointer-events: auto;
     }
 
     .overlay {
         z-index: 9999998;
         opacity: 0;
+        transition: opacity $transition;
     }
+    
     .overlayOpen {
         position: fixed;
         top: 0;

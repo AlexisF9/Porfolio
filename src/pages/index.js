@@ -1,6 +1,6 @@
 import css from './index.module.scss'
 import Link from 'next/link'
-import {Header} from '../component/header'
+import { Header } from 'component/header';
 import {createRef, useEffect} from "react";
 
 export async function getServerSideProps() { // appel du json pour rendre le contenu dynamique
@@ -41,7 +41,7 @@ export default function Home({realisations}) {
             <div ref={fond}>
                 <span>Alexis Flacher</span>
             </div>
-            <Header title="Alexis Flacher" subtitle="Développeur Front & Webdesigner" lienAbout="/posts/about" />
+            <Header title="Alexis Flacher" subtitle="Développeur Front & Webdesigner" lienAbout="/about" />
             <div className={css.content}>
                 <div>
                     <h2>Mes réalisations :</h2>
@@ -49,7 +49,6 @@ export default function Home({realisations}) {
                     {realisations.map(rea => {
                         return (
                             <div className={css.listeLien} key={rea.id}>
-                                {/*<Link href={`/posts/realisations/${rea.id}`}>*/}
                                 <Link href={`/`}>
                                     <a className={css.lienRea}
                                         onMouseEnter={() => {
@@ -64,7 +63,6 @@ export default function Home({realisations}) {
                                             //image.current.classList.remove(css.active);
                                         }}
                                         onClick={() => {
-                                            
                                             modal.current.classList.add(css.open);
                                             overlay.current.classList.add(css.overlayOpen);
                                         }}
@@ -83,16 +81,19 @@ export default function Home({realisations}) {
                         )
                     })}
                 </div>
+
                 <img alt="" className={css.image} ref={image}/>
             </div>
 
             <div className={css.overlay} ref={overlay}
+            
             onClick={() => {                 
                 modal.current.classList.remove(css.open);
                 overlay.current.classList.remove(css.overlayOpen);
             }}></div>
+
             <div id="myModal" className={css.modal} ref={modal}>
-                <div class="modal-content">
+                <div className={css.modalContent}>
                     <span 
                     className={css.close}
                     onClick={() => {
@@ -103,7 +104,7 @@ export default function Home({realisations}) {
                     <h3 ref={title}></h3>
                     <p ref={text}></p>
                     <i class="fas fa-link"></i> <a ref={lienProjet}><span></span>Code source du projet</a>
-                    <img alt="" className={css.imageModal} ref={imageModal}/>
+                    <img alt="" className={css.imageModal} ref={imageModal}/>         
                 </div>
             </div>
         </div>

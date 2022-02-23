@@ -1,12 +1,12 @@
-@import "../../styles/mixins";
-@import "../../styles/variables";
+@import "styles/mixins";
+@import "styles/variables";
 
 .header {
     //margin-bottom: -4rem;
     margin-bottom: 5rem;
-
+   
     .headerContent {
-        background-color: #0a202b;
+        background-color: $primary;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -65,6 +65,7 @@
     
             li {
                 margin: 0 0.5rem 0 0.5rem;
+                font-size: 1rem;
 
                 @include mobile {
                     margin: 0 1rem 0 0;
