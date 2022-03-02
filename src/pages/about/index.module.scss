@@ -34,43 +34,6 @@
                     max-height: 15rem;
                     @include img;
                 }
-
-                /*ul {
-                    z-index: -1;
-                    padding: 0;
-                    margin: 0;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-
-                    @include mobile {
-                        margin-top: 1rem;
-                    }
-
-                    li {
-                        margin: 0 0 10px 10px;
-                        margin-left: -2rem;
-                        opacity: 0;
-                        transition: margin-left 0.5s, opacity $transition;
-
-                        @include mobile {
-                            margin-left: 0;
-                            opacity: 1;
-                        }
-                        
-                    }
-                }
-
-                img:hover ~ ul li {
-                    margin-left: 2rem;
-                    opacity: 1;
-
-                    @include mobile {
-                        margin-left: 0;
-                        opacity: 1;
-                    }
-                }*/
-                
             }
             
             .aboutText {

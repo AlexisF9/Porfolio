@@ -1,5 +1,6 @@
 import './_app.scss'
 import Head from 'next/head'
+import { Footer } from 'component/footer'
 
 function ProjectApp({ Component, pageProps }) {
     return (
@@ -12,6 +13,7 @@ function ProjectApp({ Component, pageProps }) {
             <meta name="google-site-verification" content="LQbWiek7FeGID3McWK0S2aTRawSMYcpkkUPGWAz3lXE" />
         </Head>
         <Component {...pageProps} />
+        <Footer/>
         </>
     )
     

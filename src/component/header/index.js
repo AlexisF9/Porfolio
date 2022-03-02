@@ -25,7 +25,7 @@ export function Header(props) {
                 </li>
                 <li>
                     <Link href="https://github.com/AlexisF9">
-                        <a className={css.lienGitHub} target="BLANCK_">
+                        <a className={css.lienGitHub} target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
                     </Link>
@@ -40,7 +40,7 @@ export function Header(props) {
                 </li>
                 <li>
                     <Link href="https://www.linkedin.com/in/alexis-flacher-772ba7197/">
-                        <a className={css.lienLinkedin} target="BLANCK_">
+                        <a className={css.lienLinkedin} target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </Link>

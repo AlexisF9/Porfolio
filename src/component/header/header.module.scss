@@ -2,7 +2,6 @@
 @import "styles/variables";
 
 .header {
-    //margin-bottom: -4rem;
     margin-bottom: 5rem;
    
     .headerContent {
@@ -11,7 +10,6 @@
         justify-content: space-evenly;
         align-items: center;
         height: 13rem;
-        transition: clip-path $transition;
 
         @include mobile {
             flex-direction: column;
@@ -76,8 +74,6 @@
                 }
             }
         }
-
-        
     }
 }
 
