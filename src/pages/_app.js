@@ -1,6 +1,5 @@
 import './_app.scss'
 import Head from 'next/head'
-import { Footer } from 'component/footer'
 
 function ProjectApp({ Component, pageProps }) {
     return (
@@ -16,7 +15,6 @@ function ProjectApp({ Component, pageProps }) {
             <link rel="icon" type="image/png" href="../../../img/favicon.png" />
         </Head>
         <Component {...pageProps} />
-        <Footer/>
         </>
     )
     
