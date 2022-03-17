@@ -2,163 +2,168 @@
 @import "../styles/variables";
 
 .contentAccueil {
-    width: 100%;
-    @include fondAnimation;
-    
+  width: 100%;
+  @include fondAnimation;
+
+  @include mobile {
+    height: 100vh;
+    position: relative;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+
     @include mobile {
-        height: 100vh;
-        position: relative;
+      flex-direction: column;
     }
 
-    .content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 5rem;
+    .image {
+      margin-left: 10%;
+      opacity: 0;
+      width: 30rem;
+      @include img;
+      transition: opacity $transition;
+
+      @include mobile {
+        display: none;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    div {
+      h2 {
+        color: $primary;
+        font-size: 30px;
 
         @include mobile {
-            flex-direction: column;
+          font-size: 20px;
         }
+      }
 
-        .image {
-            margin-left: 10%;
+      .listeLien {
+        margin: 1rem 0 1rem 0;
+
+        .lienRea {
+          color: black;
+          width: fit-content;
+          font-size: 20px;
+          margin-left: -20px;
+          transition: margin $transition;
+
+          @include mobile {
+            font-size: 16px;
+          }
+
+          i {
+            width: 15px;
+            text-align: center;
             opacity: 0;
-            width: 30rem;
-            @include img;
             transition: opacity $transition;
+          }
 
-            @include mobile {
-                display: none;
+          &:hover {
+            margin-left: 0;
+            i {
+              opacity: 1;
             }
-
-            &.active {
-                opacity: 1;
-            }
+          }
         }
 
-        div {
+        ul {
+          display: flex;
+          justify-content: flex-start;
+          padding: 0;
+          margin: 5px 0 0 0;
 
-            h2 {
-                color: $primary;
-                font-size: 30px;
-            }
-            
-            .listeLien {
-                margin: 1rem 0 1rem 0;
-
-                .lienRea {
-                    color: black;
-                    width: fit-content;
-                    font-size: 20px;
-                    margin-left: -20px;
-                    transition: margin $transition;
-
-                    i {
-                        width: 15px;
-                        text-align: center;
-                        opacity: 0;
-                        transition: opacity $transition;
-                    }
-
-                    &:hover {
-                        margin-left: 0;
-                        i {
-                            opacity: 1;
-                        }
-                    }
-                }
-
-                ul {
-                    display: flex;
-                    justify-content: flex-start;
-                    padding: 0;
-                    margin: 5px 0 0 0;
-
-                    li {
-                        border: 1px solid black;
-                        padding: 5px;
-                        border-radius: 3px;
-                        margin-right: 10px;
-                        font-size: 14px;
-                        width: fit-content;
-                    }
-                }
-
-                
-            }
+          li {
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 3px;
+            margin-right: 10px;
+            font-size: 14px;
+            width: fit-content;
+          }
         }
+      }
     }
+  }
 
-    .modal {
-        pointer-events: none;
-        width: 40%;
-        position: fixed;
-        top: 0;
-        right: -40%;
-        bottom: 0;
-        background-color: white;
-        z-index: 9999999;
-        color: black;
-        transition: right 0.6s;
-
-        @include mobile {
-            width: 100%;
-            right: -100%;
-        }
-
-        .modalContent {
-            padding: 3rem 2rem;
-
-            img {
-                width: 100%;
-                @include img;
-                margin-top: 1rem;
-    
-                @include mobile {
-                    margin-top: 2rem;
-                }
-            }
-    
-            span {
-                cursor: pointer;
-                position: absolute;
-                right: 20px;
-                top: 10px;
-                font-size: 30px;
-            }
-    
-            a {
-                color: black;
-                @include lien;
-            }
-        }
-    }
-
-    .open {
-        right: 0;
-        pointer-events: auto;
-    }
-
-    .overlay {
-        z-index: 9999998;
-        opacity: 0;
-        transition: opacity $transition;
-    }
-    
-    .overlayOpen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: black;
-        opacity: 0.8;
-    }
+  .modal {
+    pointer-events: none;
+    width: 40%;
+    position: fixed;
+    top: 0;
+    right: -40%;
+    bottom: 0;
+    background-color: white;
+    z-index: 9999999;
+    color: black;
+    transition: right 0.6s;
 
     @include mobile {
-        .overlay, .overlayOpen {
-            display: none;
-        }
+      width: 100%;
+      right: -100%;
     }
-}
 
+    .modalContent {
+      padding: 3rem 2rem;
+
+      img {
+        width: 100%;
+        @include img;
+        margin-top: 1rem;
+
+        @include mobile {
+          margin-top: 2rem;
+        }
+      }
+
+      span {
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 30px;
+      }
+
+      a {
+        color: black;
+        @include lien;
+      }
+    }
+  }
+
+  .open {
+    right: 0;
+    pointer-events: auto;
+  }
+
+  .overlay {
+    z-index: 9999998;
+    opacity: 0;
+    transition: opacity $transition;
+  }
+
+  .overlayOpen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.8;
+  }
+
+  @include mobile {
+    .overlay,
+    .overlayOpen {
+      display: none;
+    }
+  }
+}
