@@ -1,6 +1,18 @@
 [
     {
         "id": "1",
+        "titre": "Projet Twitter (en cours)",
+        "img": "/img/twitter.png",
+        "text": "Projet personnel de création d'un blog du style Twitter avec un système de connexion, création de compte, création de posts, de commentaires... Ce projet m'as permis d'en apprendre plus sur les API grâce au backend réalisé sur le CMS Strapi qui est un CMS de création d'API.",
+        "url_repo": "https://github.com/AlexisF9/strapi-blog",
+        "tags": [
+            "Next JS",
+            "Strapi",
+            "SASS" 
+        ]     
+    },
+    {
+        "id": "2",
         "titre": "What to Drink ?",
         "img": "/img/what-to-drink.png",
         "text": "Projet personnel de création d'une application de recettes de cocktails en NextJS avec l'intégration de l'API TheCocktailsDB",
@@ -11,7 +23,7 @@
         ]     
     },
     {
-        "id": "2",
+        "id": "3",
         "titre": "Projet MERN",
         "img": "/img/mern.jpeg",
         "text": "Lors de mon année de Bachelor j'ai eu l'occasion de créer un projet MERN (Mongo DB, Express, React JS, Node JS) où j'ai produit pour la première fois le backend et le frontend en JS.",
@@ -24,7 +36,7 @@
         ]     
     },
     {
-        "id": "3",
+        "id": "4",
         "titre": "Scraping avec puppeteer",
         "img": "/img/puppeteer.jpeg",
         "text": "Le scraping est un concept qui m'était inconnu avant mon année de Bachelor. J'ai trouvé le concept très intéressant, ce qui m'a donné l'envie d'en apprendre davantage et de m'y essayer pour la première fois avec Puppeteer.",
@@ -34,7 +46,7 @@
         ]     
     },
     {
-        "id": "4",
+        "id": "5",
         "titre": "Rick and Morty API",
         "img": "/img/rick-morty.png",
         "text": "A mon entrée chez TBWA/Paris, j'ai eu l'occasion de réaliser une remise à niveau sur les framework React et Next JS. C'est dans ce contexte que j'ai réalisé cette application avec un appel à une API sur le thème de Rick et Morty",
