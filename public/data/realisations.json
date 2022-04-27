@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "titre": "Projet Twitter (en cours)",
+        "titre": "Projet Twitter",
         "img": "/img/twitter.png",
         "text": "Projet personnel de création d'un blog du style Twitter avec un système de connexion/inscription, création de posts, de commentaires, modification de son profil... Ce projet m'as permis d'en apprendre plus sur les API grâce au backend réalisé sur le CMS Strapi qui est un CMS de création d'API.",
         "url_repo": "https://github.com/AlexisF9/strapi-blog",
