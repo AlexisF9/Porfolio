@@ -1,7 +1,7 @@
 import css from "./index.module.scss";
 import Link from "next/link";
 import { Header } from "component/header";
-import { createRef, useEffect } from "react";
+import { createRef, useEffect, useState } from "react";
 
 export async function getServerSideProps() {
   // appel du json pour rendre le contenu dynamique
@@ -22,12 +22,17 @@ export async function getServerSideProps() {
 export default function Home({ realisations }) {
   const fond = createRef();
   const image = createRef();
+  const image2 = createRef();
+  const image3 = createRef();
+  const listImg = createRef();
   const imageModal = createRef();
   const title = createRef();
   const text = createRef();
   const lienProjet = createRef();
   const modal = createRef();
   const overlay = createRef();
+
+  const [urlRepo, setUrlRepo] = useState();
 
   useEffect(() => {
     fond.current.classList.add(css.fond);
@@ -47,22 +52,24 @@ export default function Home({ realisations }) {
         <div>
           <h2>Mes réalisations :</h2>
 
-          {realisations.map((rea) => {
+          {realisations.map((rea, index) => {
             return (
-              <div className={css.listeLien} key={rea.id}>
+              <div className={css.listeLien} key={index}>
                 <Link href={`/`}>
                   <a
                     className={css.lienRea}
                     onMouseEnter={() => {
-                      image.current.classList.add(css.active);
                       image.current.src = rea.img;
+                      image2.current.src = rea.img2;
+                      image3.current.src = rea.img3;
+                      listImg.current.classList.add(css.active);
+
                       imageModal.current.src = rea.img;
                       text.current.innerHTML = rea.text;
                       title.current.innerHTML = rea.titre;
-                      lienProjet.current.href = rea.url_repo;
-                    }}
-                    onMouseLeave={() => {
-                      //image.current.classList.remove(css.active);
+                      if (rea.url_repo != null) {
+                        setUrlRepo(rea.url_repo);
+                      }
                     }}
                     onClick={() => {
                       modal.current.classList.add(css.open);
@@ -81,8 +88,18 @@ export default function Home({ realisations }) {
             );
           })}
         </div>
-
-        <img alt="" className={css.image} ref={image} />
+        <div
+          className={css.listImages}
+          ref={listImg}
+          onClick={() => {
+            modal.current.classList.add(css.open);
+            overlay.current.classList.add(css.overlayOpen);
+          }}
+        >
+          {image2 != null && <img alt="" className={css.image2} ref={image2} />}
+          <img alt="" className={css.image} ref={image} />
+          {image3 != null && <img alt="" className={css.image3} ref={image3} />}
+        </div>
       </div>
 
       <div
@@ -107,10 +124,14 @@ export default function Home({ realisations }) {
           </span>
           <h3 ref={title}></h3>
           <p ref={text}></p>
-          <i class="fas fa-link"></i>{" "}
-          <a ref={lienProjet}>
-            <span></span>Code source du projet
-          </a>
+          {urlRepo && (
+            <>
+              <i class="fas fa-link"></i>
+              <a href={urlRepo}>
+                <span></span>Code source du projet
+              </a>
+            </>
+          )}
           <img alt="" className={css.imageModal} ref={imageModal} />
         </div>
       </div>

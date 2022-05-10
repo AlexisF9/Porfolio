@@ -14,25 +14,66 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
 
     @include mobile {
       flex-direction: column;
     }
 
-    .image {
+    .listImages {
       margin-left: 10%;
+      display: flex;
+      flex-direction: column;
       opacity: 0;
-      width: 30rem;
-      @include img;
-      transition: opacity $transition;
 
-      @include mobile {
-        display: none;
+      .image,
+      .image2,
+      .image3 {
+        margin-bottom: 1rem;
+        width: 30rem;
+        height: 15rem;
+        filter: blur(4px);
+        opacity: 0;
+        transform: scale(0);
+        transition: filter $transition, opacity $transition,
+          transform $transition;
+        @include img;
+
+        @include mobile {
+          display: none;
+        }
+
+        &:hover {
+          z-index: 8;
+          filter: blur(0) !important;
+        }
+      }
+
+      .image {
+        z-index: 7;
+      }
+
+      .image2,
+      .image3 {
+        transform: rotate(0);
+      }
+
+      &:hover {
+        .image2,
+        .image3 {
+          opacity: 1;
+        }
       }
 
       &.active {
         opacity: 1;
+        transition: opacity $transition !important;
+        cursor: pointer;
+
+        .image {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
     }
 
