@@ -28,11 +28,8 @@ export default function Home({ realisations }) {
   const imageModal = createRef();
   const title = createRef();
   const text = createRef();
-  const lienProjet = createRef();
   const modal = createRef();
   const overlay = createRef();
-
-  const [urlRepo, setUrlRepo] = useState();
 
   useEffect(() => {
     fond.current.classList.add(css.fond);
@@ -67,9 +64,6 @@ export default function Home({ realisations }) {
                       imageModal.current.src = rea.img;
                       text.current.innerHTML = rea.text;
                       title.current.innerHTML = rea.titre;
-                      if (rea.url_repo != null) {
-                        setUrlRepo(rea.url_repo);
-                      }
                     }}
                     onClick={() => {
                       modal.current.classList.add(css.open);
@@ -79,6 +73,13 @@ export default function Home({ realisations }) {
                     <i class="fas fa-angle-right"></i> {rea.titre}
                   </a>
                 </Link>
+                {rea.url_repo != null && (
+                  <Link href={rea.url_repo}>
+                    <a className={css.lienRepo}>
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </Link>
+                )}
                 <ul>
                   {rea.tags.map((tag, index) => {
                     return <li key={index}>{tag}</li>;
@@ -124,14 +125,6 @@ export default function Home({ realisations }) {
           </span>
           <h3 ref={title}></h3>
           <p ref={text}></p>
-          {urlRepo && (
-            <>
-              <i class="fas fa-link"></i>
-              <a href={urlRepo}>
-                <span></span>Code source du projet
-              </a>
-            </>
-          )}
           <img alt="" className={css.imageModal} ref={imageModal} />
         </div>
       </div>

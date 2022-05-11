@@ -116,6 +116,19 @@
           }
         }
 
+        .lienRepo {
+          margin-left: 10px;
+          color: black;
+
+          i {
+            transition: transform $transition;
+
+            &:hover {
+              transform: scale(1.4);
+            }
+          }
+        }
+
         ul {
           display: flex;
           justify-content: flex-start;
@@ -171,11 +184,6 @@
         right: 20px;
         top: 10px;
         font-size: 30px;
-      }
-
-      a {
-        color: black;
-        @include lien;
       }
     }
   }
