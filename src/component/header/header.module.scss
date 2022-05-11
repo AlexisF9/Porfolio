@@ -2,78 +2,87 @@
 @import "styles/variables";
 
 .header {
-    margin-bottom: 5rem;
-   
-    .headerContent {
-        background-color: $primary;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 13rem;
+  margin-bottom: 5rem;
+
+  .headerContent {
+    background-color: $primary;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 13rem;
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 1rem;
+      height: 15rem;
+    }
+
+    h1,
+    p,
+    a {
+      &::selection {
+        color: black;
+        background: white;
+      }
+
+      &::-moz-selection {
+        color: black;
+        background: white;
+      }
+    }
+
+    p,
+    a {
+      color: white;
+      margin: 0;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      @include mobile {
+        display: none;
+      }
+    }
+
+    img {
+      margin-left: 5px;
+      width: 15px;
+    }
+
+    .lienEmail {
+      i:last-child {
+        display: none;
+      }
+      i:first-child:hover {
+        display: none;
+      }
+      i:first-child:hover ~ i:last-child {
+        display: block;
+      }
+    }
+
+    ul {
+      display: flex;
+
+      @include mobile {
+        padding: 0;
+      }
+
+      li {
+        margin: 0 0.5rem 0 0.5rem;
+        font-size: 1rem;
 
         @include mobile {
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding-left: 1rem;
-            height: 15rem;
+          margin: 0 1rem 0 0;
         }
 
-        h1, p, a {
-            &::selection {
-                color: black;
-                background: white;
-            }
-               
-            &::-moz-selection {
-                color: black;
-                background: white;
-            }
+        .lienHeader {
+          @include lienHeader;
         }
-    
-        p, a{
-            color: white;
-            margin: 0;
-        }
-
-        p {
-            @include mobile {
-                display: none;
-            }
-        }
-
-        .lienEmail {
-            i:last-child {
-                display: none;
-            }
-            i:first-child:hover {
-                display: none;
-            }
-            i:first-child:hover ~ i:last-child {
-                display: block;
-            }
-        }
-    
-        ul {
-            display: flex;
-
-            @include mobile {
-                padding: 0;
-            }
-    
-            li {
-                margin: 0 0.5rem 0 0.5rem;
-                font-size: 1rem;
-
-                @include mobile {
-                    margin: 0 1rem 0 0;
-                }
-
-                .lienHeader {
-                    @include lienHeader;
-                }
-            }
-        }
+      }
     }
+  }
 }
-

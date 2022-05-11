@@ -42,7 +42,8 @@ export default function Home({ realisations }) {
       </div>
       <Header
         title="Alexis Flacher"
-        subtitle="Développeur Front & Webdesigner"
+        subtitle="Développeur Frontend chez TBWA\Paris"
+        urlLogo="/img/tbwa-logo.jpg"
         lienAbout="/about"
       />
       <div className={css.content}>
