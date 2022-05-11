@@ -3,15 +3,19 @@
 
 .header {
   margin-bottom: 5rem;
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
 
   .headerContent {
-    background-color: $primary;
+    width: 70%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 13rem;
 
     @include mobile {
+      width: 90%;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
