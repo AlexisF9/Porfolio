@@ -16,12 +16,13 @@
         "img": "/img/twitter/twitter.png",
         "img2": "/img/twitter/twitter2.png",
         "img3": "/img/twitter/twitter3.png",
-        "text": "Projet personnel de création d'un blog du style Twitter avec un système de connexion/inscription, création de posts, de commentaires, modification de son profil... Ce projet m'as permis d'en apprendre plus sur les API grâce au backend réalisé sur le CMS Strapi qui est un CMS de création d'API.",
+        "text": "Projet personnel de création d'un blog du style Twitter. Le back est sur Strapi, un CMS gratuit de création d'API et le front sur NextJS. Le blog est dynamique et permet de pouvoir s'inscrire, se connecter, voir son profil et le modifier ou encore de poster des posts ou des commentaires.",
         "url_repo": "https://github.com/AlexisF9/strapi-twitter",
         "tags": [
             "NextJS",
             "Strapi",
-            "SASS" 
+            "SASS",
+            "MUI"
         ]     
     },
     {
@@ -42,7 +43,7 @@
         "img": "/img/what-to-drink/what-to-drink.png",
         "img2": "/img/what-to-drink/what-to-drink2.png",
         "img3": "/img/what-to-drink/what-to-drink3.png",
-        "text": "Projet personnel de création d'une application de recettes de cocktails en NextJS avec l'intégration de l'API TheCocktailsDB.",
+        "text": "Projet personnel de création d'une application de cocktails en NextJS avec l'intégration de l'API TheCocktailsDB. L'application est en ligne si vous souhaitez la tester (Lien dans mon github).",
         "url_repo": "https://github.com/AlexisF9/what-to-drink",
         "tags": [
             "NextJS",
