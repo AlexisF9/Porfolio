@@ -1,5 +1,18 @@
 [
     {
+        "titre": "My Immo (en cours)",
+        "img": "/img/MyImmo/myimmo.png",
+        "img2": "/img/MyImmo/myimmo2.png",
+        "img3": "/img/MyImmo/myimmo3.png",
+        "text": "Création d'une appplication de recherche immobilière en NextJS et Strapi. Ce projet me permet d'approfondir mes connaissances dans la gestion des cookies et des sessions utilisateurs",
+        "url_repo": "https://github.com/AlexisF9/MyImmo",
+        "tags": [
+            "NextJS",
+            "Strapi",
+            "SASS"
+        ]     
+    },
+    {
         "titre": "Caisse d'Epargne",
         "img": "/img/izicarte/izicarte.png",
         "img2": "/img/izicarte/izicarte2.png",
