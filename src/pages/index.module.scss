@@ -10,6 +10,18 @@
     position: relative;
   }
 
+  .annonce {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 24px;
+    background-color: aqua;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
   .content {
     width: 100%;
     display: flex;

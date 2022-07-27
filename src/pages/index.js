@@ -41,6 +41,7 @@ export default function Home({ realisations }) {
 
   return (
     <div className={css.contentAccueil}>
+      <p className={css.annonce}>Mon nouveau portfolio arrive bientôt ! 😱</p>
       <div ref={fond}>
         <span>Alexis Flacher</span>
       </div>
